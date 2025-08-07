@@ -9,9 +9,6 @@ To separate a network into its orphan nodes and individual neurons import nrn_se
 # Example: 
 
 import nrn_sep as ns 
-
 input_path  = 'path_to_swc'
-
 output_path = 'path_to_desired_location'
-
 ns.main(input_path, output_path)
