@@ -1,6 +1,6 @@
 import os 
-input_file = 'test_retinal_cells.swc' # replace with your SWC file path
-output_path = 'C:\\Users\\emanu\\USC-Summer\\nrn_sep_files'  # replace with your desired output directory
+# input_file = 'test_retinal_cells.swc' # replace with your SWC file path
+# output_path = 'C:\\Users\\emanu\\USC-Summer\\nrn_sep_files'  # replace with your desired output directory
 
 def main(input_file, output_path): 
     """
@@ -55,10 +55,12 @@ def main(input_file, output_path):
         r_orphan_nodes += new_tree[1]
         nrn_data = redef_idx(unfiltered_nrn_data)
         num_orphans += 1 
-        file(nrn_data, output_path, num_orphans, orphan_file)  # Write se parated neurons to files
+        file(nrn_data, output_path, num_orphans, orphan_file)  # Write separated neurons to files
         print(r_orphan_nodes, 'nodes connected to an orphan node.\n')
-    if returned_nodes + len(soma_indices[1]) == len(swc_data): 
+    if (returned_nodes + len(soma_indices[1]) == len(swc_data)) or (r_orphan_nodes + len(soma_indices[1]) == len(swc_data)): 
         print('All soma originating nodes plus orphan nodes separated.\n')
+    else: 
+        print('Not all nodes were separated. \n Please check the SWC data for errors, or orphan node connections.')
         
 def soma_id_and_orphan(data): # Seems to work fine
     """
