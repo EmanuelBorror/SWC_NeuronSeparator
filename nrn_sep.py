@@ -17,10 +17,7 @@ def main(input_file, output_path):
     swc_data = swc.read_swc_file(input_file)  # Read SWC data
     recursion_limit = len(swc_data) + 1 # changes the recursion limit so that recursive function can be called more than 5 times.
     sys.setrecursionlimit(recursion_limit)
-    # Find soma indices in the SWC data
-    # structure_identifier = 1 # column # in swc format for structure identifier
-    # parent_sample = 6 # column # in swc format for parent node
-    # sample_num = 0 # column # in swc format for sample number
+
     soma_indices = soma_id_and_orphan(swc_data) # array of soma indices from swc data
     dictionary_data = data_into_dictionary(swc_data) # 
     num_soma = 0
@@ -182,6 +179,7 @@ if __name__ == '__main__':
     # input_file = 'test_retinal_cells.swc'  # replace with your SWC file path
     # output_path = 'C:\\Users\\emanu\\USC-Summer\\nrn_sep_files'  # replace with your desired output directory
     main(input_file, output_path)
+
 
 
 
