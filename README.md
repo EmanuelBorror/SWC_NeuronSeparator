@@ -13,7 +13,7 @@ input_path  = 'path_to_swc'
 output_path = 'path_to_desired_location'  
 ns.main(input_path, output_path)  
 # To Run alone: 
-At the bottom of the script uncomment "input_file" and "output_path" and replace those variables with the desired path. Then run the script.     
+At the bottom of the script uncomment "input_file" and "output_path" and replace those variables with the desired path. Then run the script. It should like as shown below:             
 if __name__ == '__main__':    
         # input_file = 'path_to_swc'  # replace with your SWC file path      
         # output_path = 'path_to_desired_location'  # replace with your desired output directory      
