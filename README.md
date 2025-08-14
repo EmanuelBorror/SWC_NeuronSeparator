@@ -18,8 +18,9 @@ if __name__ == '__main__':
         # input_file = 'path_to_swc'  # replace with your SWC file path      
         # output_path = 'path_to_desired_location'  # replace with your desired output directory      
         main(input_file, output_path)      
-# To Use Functions Within Script        
+# To Use Specific Functions Within Script        
 To run individual functions from nrn_sep, import the script into the folder you are working in. Use call to the function you want to use in the following format:         
 "nrn_sep.redef_idx(data)"        
-if you import nrn_sep as ns, use "ns.redef_idx(data)"        
+if you import nrn_sep as ns, use "ns.redef_idx(data)"       
+If you want to use a separate function other than 'redef_idx', replace it with the desired function. 
 Read Function Description, Parameters, and return of each function before use. These are located in function definitions within nrn_sep.py        
